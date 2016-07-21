@@ -11,6 +11,7 @@ public class IfTest {
         int second = s.nextInt();
         System.out.println("Please input third Number type of int : ");
         int third = s.nextInt();
+        s.close();
         int Max = first;
         // compare
         if (Max < second) {
