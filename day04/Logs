@@ -13,3 +13,18 @@ git config user.email renjianyong0923@outlook.com
 E:\Program Files\feiq\Recv Files
 
 clone https://github.com/GongSoSn/myFirstRepository.git
+
+*************************************************************************************************
+class:
+
+loop structure:
+   1. while(conditions){
+   
+                }
+   2.do{
+            execute statement
+   }while(conditions)
+   
+   3.for(initialization statement;condition;execute statement){
+                 execute statement
+   }
