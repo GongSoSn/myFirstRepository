@@ -52,8 +52,6 @@ public class AngryBirdIndex {
             }
             adminLogin();
         };
-
-
     }
 
     // check user.name,user.pwd
