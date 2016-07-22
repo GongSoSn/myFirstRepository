@@ -54,7 +54,7 @@ public class BranchTest {
                 monthDays = checkYear(year) + 31 * 7 + 30 * 4;
                 break;
         }
-        System.out.println("second ＝ " + checkYear(2016));
+        System.out.println("second ＝ " + checkYear(year));
         System.out.println("monthDays ＝ " + monthDays);
         System.out.println("day ＝ " + day);
         if (Month < 8 && Month % 2 != 0 && Month != 2) {
