@@ -1,0 +1,15 @@
+
+E:\Program Files\feiq\Recv Files
+
+登录到接收邮件服务器(POP3): 电子邮件服务器拒绝您登录。请在“帐户设置”中验证此帐户的用户名及密码。  响应服务器: -ERR 请使用授权码登录。详情请看: http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+
+pybmbruzbyozdgje
+
+git remote add origin git@github.com:GongSoSn/myFirstRepository.git
+
+git config user.name GongSoSn
+git config user.email renjianyong0923@outlook.com
+
+E:\Program Files\feiq\Recv Files
+
+clone https://github.com/GongSoSn/myFirstRepository.git

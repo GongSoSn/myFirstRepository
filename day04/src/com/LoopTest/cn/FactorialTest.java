@@ -5,20 +5,16 @@ import java.util.Scanner;
 public class FactorialTest {
     private static int getFactorial(int a) {
         int sum = 1;
-        while (a > 1) {
-            sum = sum + a * (a - 1);
-            a--;
+        for (int i = 1; i <= a; i++) {
+            sum *= i;
         }
         return sum;
     }
 
     private static void addFactorial(int f) {
-        int a = 1;
-        int sum = 1;
-        while (a < 1) {
-
+        int sum = 0;
+        for (int a = 1; a <= f; a++) {
             sum += getFactorial(a);
-            a++;
         }
         System.out.println("sum = " + sum);
     }
@@ -27,6 +23,7 @@ public class FactorialTest {
         System.out.println("please input a number : ");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
+        System.out.println(getFactorial(a));
         addFactorial(a);
     }
 }
