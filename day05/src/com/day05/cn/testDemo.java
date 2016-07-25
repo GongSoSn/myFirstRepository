@@ -16,21 +16,29 @@ public class testDemo {
         System.out.println("第一种方法");
         System.out.println(" “ " + str1 + " ” " + " 在 " + str + " 出现的次数为 " + count + "次 ！");
 
+        /**
+         * 第三种方法
+         */
+        String strThird = "how are you hOw Old are you".toLowerCase();
+        int countThird = 0;
+        int j = 0;
+        for (int i = 0; i < strThird.length(); i++) {
+            j = strThird.indexOf('o', j);
+            if (j != -1 && j < i) {
+                countThird++;
+                System.out.println(j);
+                j++;
+            }
 
-        // String str = "how are you hOw Old are you".toLowerCase();
-        // int count = 0;
-        // int j = 0;
-        // for (int i = 0; i < str.length(); i++) {
-        // j = str.indexOf('o', j) + 1;
-        // System.out.println(j);
-        // }
+        }
+        System.out.println("第三种方法 : ");
+        System.out.println(countThird);
 
         /**
          * 第二种方法
          */
         String strSecond = "how are you hOw Old are you".toLowerCase();
         int countSecond = 0;
-        int j = 0;
         for (int i = 0; i < strSecond.length(); i++) {
             if (strSecond.charAt(i) == 'o') {
                 countSecond++;
