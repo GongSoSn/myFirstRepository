@@ -56,6 +56,8 @@ public class StringMethodTest {
         System.out.println(strStart.startsWith("s"));
         System.out.println(strStart.startsWith("S"));// 区分大小写
         System.out.println(strStart.startsWith("ss"));
+        System.out.println(strStart.startsWith("r", 3));
+        System.out.println(strStart.startsWith("ar", 3));
         System.out.println("*******************************************\n");
         // 'endsWith'
         String strEnd = "ending";
@@ -63,5 +65,6 @@ public class StringMethodTest {
         System.out.println(strEnd.endsWith("G"));
         System.out.println(strEnd.endsWith("gf"));
         System.out.println("*******************************************\n");
+
     }
 }
