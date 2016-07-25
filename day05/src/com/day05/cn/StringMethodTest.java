@@ -36,7 +36,7 @@ public class StringMethodTest {
         // 'compareTo'
         String strCompare = "Compare";
         String strCompareTo = "CompareTo";
-        System.out.println(strCompare.compareTo(strCompareTo));// compare by String`Length
+        System.out.println(strCompare.compareTo(strCompareTo));// compare by ASCII表数值
         System.out.println("*******************************************\n");
         // 'toUpperCase'
         String strUpper = "a";
