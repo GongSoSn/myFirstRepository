@@ -33,10 +33,12 @@ public class DifferentTest {
     // 'return'
     private static void testReturn() {
         for (int i = 1; i < 10; i++) {
-            if (i / 2 != 0) {
-                return;
+            for (int j = 1; j < 10; j++) {
+                if (j / 2 != 0) {
+                    return;
+                }
+                System.out.print(i);
             }
-            System.out.print(i);
         }
         System.out.println("return");
     }
