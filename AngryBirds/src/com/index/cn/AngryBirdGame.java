@@ -114,6 +114,59 @@ public class AngryBirdGame {
                                     }
                                     break;
                                 case 2:// 修改玩家
+                                       // 首先遍历一下玩家信息
+                                    System.out.println("添加的玩家信息如下：\n玩家姓名\t玩家昵称\t玩家性别\t玩家年龄");
+                                    for (String player : players) {
+                                        // 排除数组元素为空的情况
+                                        if (player != null && player != "") {
+                                            String[] showPlayer = player.split("&");
+                                            for (String showOut : showPlayer) {
+                                                System.out.print(showOut + "\t");
+                                            }
+                                            System.out.println();
+                                        }
+                                    }
+                                    // 修改玩家操作
+                                    // ①获取需要修改的玩家(通过匹配姓名找到需要修改的玩家)
+                                    System.out.println("请您输入需要修改的名字:");
+                                    String modName = scanner.next();
+                                    // 判断是否存在此玩家
+                                    for (int z = 0; z < players.length; z++) {
+                                        // 排除数组中不符合要求的元素
+                                        if (players[z] != null && players[z] != "") {
+                                            // 拆分玩家信息，找到‘玩家姓名’
+                                            String[] modMessages = players[z].split("&");// TODO
+                                            for (int i = 0; i < players.length; i++) {
+                                                String checkName = modMessages[0];
+                                                // 验证此玩家是不是存在
+                                                if (modName.equals(checkName)) {
+                                                    System.out.println(
+                                                            "您已经选中  " + modName + " 玩家，请您修改相关信息 ！");
+                                                    // ②开始修改玩家信息(实现的功能：只能修改除了玩家姓名之外的信息)
+                                                    System.out.println("请您输入需要修改的玩家密码 ！");
+                                                    modMessages[1] = scanner.next();
+                                                    System.out.println("请您输入需要修改的玩家昵称 ！");
+                                                    modMessages[2] = scanner.next();
+                                                    System.out.println("请您输入需要修改的玩家性别 ！");
+                                                    modMessages[3] = scanner.next();
+                                                    System.out.println("请您输入需要修改的玩家年龄 ！");
+                                                    modMessages[4] = scanner.next();
+                                                    // 拼接当前的玩家信息(A&A&A&A&A..)
+                                                    String modPlayer = modMessages[0] + "&"
+                                                            + modMessages[1] + "&" + modMessages[2]
+                                                            + "&" + modMessages[3] + "&"
+                                                            + modMessages[4];
+                                                    // 新修改的用户添加到数组中
+                                                    // ①获取当前用户在数组中的索引(必须在当前的索引上修改)
+                                                    int newIndex = z;
+                                                    players[newIndex] = modPlayer;
+                                                    break;
+                                                } else {
+                                                    System.out.println("您输入的玩家不存在，请重新输入 ！");
+                                                }
+                                            }
+                                        }
+                                    }
 
                                     break;
                                 case 3:// 删除玩家
