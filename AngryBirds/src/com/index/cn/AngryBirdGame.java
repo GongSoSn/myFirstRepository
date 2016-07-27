@@ -12,7 +12,6 @@ public class AngryBirdGame {
         // 声明用于指定数组索引的标识符
         int index = 0;
 
-
         while (loop) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("**********************************************\n");
@@ -41,6 +40,7 @@ public class AngryBirdGame {
                             for (int i = 0; i < players.length; i++) {
                                 loginName = loginUser[0];
                                 loginPass = loginUser[1];
+                                // 用户名和密码验证验放在循环中，避免验证的只能是最后一个输入的用户信息
                                 if (userName.equals(loginName) && userPwd.equals(loginPass)) {
                                     System.out.println(loginName + " 您好！您已登录成功！");
                                     System.out.println(
@@ -53,7 +53,6 @@ public class AngryBirdGame {
                                     break;
                                 }
                             }
-
                         }
                     }
                     break;
@@ -122,13 +121,18 @@ public class AngryBirdGame {
                                     break;
                                 case 4:// 查询玩家
                                        // 遍历玩家信息
+                                    System.out.println("添加的玩家信息如下：\n玩家姓名\t玩家昵称\t玩家性别\t玩家年龄");
                                     for (String player : players) {
                                         // 排除数组元素为空的情况
                                         if (player != null && player != "") {
                                             String[] showPlayer = player.split("&");
-                                            for (String string : showPlayer) {
-                                                System.out.print(string + "\t");
+                                            for (int i = 0; i < showPlayer.length; i++) {
+                                                // 查询时，密码不可见！
+                                                if (i != 1) {
+                                                    System.out.print(showPlayer[i] + "\t");
+                                                }
                                             }
+                                            System.out.println();
                                         }
                                     }
                                     break;
