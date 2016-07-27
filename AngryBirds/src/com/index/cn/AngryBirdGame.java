@@ -135,7 +135,7 @@ public class AngryBirdGame {
                                         // 排除数组中不符合要求的元素
                                         if (players[z] != null && players[z] != "") {
                                             // 拆分玩家信息，找到‘玩家姓名’
-                                            String[] modMessages = players[z].split("&");// TODO
+                                            String[] modMessages = players[z].split("&");
                                             for (int i = 0; i < players.length; i++) {
                                                 String checkName = modMessages[0];
                                                 // 验证此玩家是不是存在
@@ -162,12 +162,12 @@ public class AngryBirdGame {
                                                     players[newIndex] = modPlayer;
                                                     break;
                                                 } else {
-                                                    System.out.println("您输入的玩家不存在，请重新输入 ！");
+                                                    break;
                                                 }
                                             }
+                                            continue;
                                         }
                                     }
-
                                     break;
                                 case 3:// 删除玩家
 
