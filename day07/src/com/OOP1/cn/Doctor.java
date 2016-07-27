@@ -34,5 +34,9 @@ public class Doctor {
         System.out.println("d2 n : " + d2.n);
         System.out.println("d3 n : " + d3.n);
         System.out.println("d3 n : " + d3.n);
+        d3.n = 888;
+        d2.n = 88;
+        System.out.println("d2 n : " + d2.n);
+        System.out.println("d3 n : " + d3.n);
     }
 }
