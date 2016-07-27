@@ -162,10 +162,10 @@ public class AngryBirdGame {
                                                     players[newIndex] = modPlayer;
                                                     break;
                                                 } else {
-                                                    break;
+                                                    break;// TODO || 以后需要优化......
                                                 }
                                             }
-                                            continue;
+                                            continue;// TODO || 以后需要修改......
                                         }
                                     }
                                     break;
